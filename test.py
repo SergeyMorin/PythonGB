@@ -1,31 +1,56 @@
-# Задача 32: Определить индексы элементов массива (списка), значения которых принадлежат заданному диапазону
-# (т.е. не меньше заданного минимума и не больше заданного максимума)
+# a = [1, 2, 3, 5, 8, 15, 23, 38]
+# b = list()
 
-# a = input().split()
-a = "-5 9 0 3 -1 -2 1 4 -2 10 2 0 -9 8 10 -9 0 -5 -5 7".split()
-min = 5
-max = 15
-list_index = list()
+# for i in a:
+#     if i%2 == 0:
+#         b.append([i, i**2])
 
-for el in range(len(a)):
-    a[el] = int(a[el])
+# print(b)
 
-print(a)
+# ////////////////////////////////////////////////////////////////////////////////////////////////
 
-# for i in range(len(a)):
-#     if a[i] < max and a[i] > min:
-#         list_index.append(i)
+# def select(f, col):
+#     return [f(x) for x in col]
 
-# print(list_index)
+# def where(f, col):
+#     return [x for x in col if f(x)]
 
-def somefunc(somelist, maxel, minel, finallist, n = 0):
-    if n < len(somelist):
-        if somelist[n] < maxel and somelist[n] > minel:
-            finallist.append(n)
-            return somefunc(somelist, maxel, minel, finallist, n+1)
-        else:
-            return somefunc(somelist, maxel, minel, finallist, n+1)
-    else:
-        return finallist
-    
-print(somefunc(a,max,min,list_index))
+# a = [1, 2, 3, 5, 8, 15, 23, 38]
+# b = select(int,a)
+# print(b)
+# b = where(lambda x: x%2 ==  0, b)
+# print(b)
+# b = list(select(lambda x: (x,x**2),b))
+# print(b)
+
+# /////////////////////////////////////////////////////////////////////////////////////////////
+
+# list_1 = [x for x in range(1,20,2)]
+# print(list_1)
+# list_1 = list(map(lambda x: x+10, list_1))
+# print(list_1)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////
+
+# a = "15 216 24 213 325 2 2556 32"
+# print(a)
+
+# a = list(map(int,a.split()))
+# print(a)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////
+
+a = [1, 2, 3, 5, 8, 15, 23, 38]
+b = map(int,a)
+b = filter(lambda x: x%2 ==  0, b)
+b = list(map(lambda x: (x,x**2),b))
+print(b)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////
+
+# a = [1, 2, 3, 5, 8, 15, 23, 38]
+# b = list(filter(lambda x: x%10 == 5, a))
+# print(b)
+
+zip()
+b = list(enumerate())
