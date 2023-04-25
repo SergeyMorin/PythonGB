@@ -1,3 +1,5 @@
+import interface
+
 def add_contact(contact):
     # contact = [input('Введите имя: ')+" ", input('Введите фамилию: ')+" ", input('Введите отчество: ')+" ", input('Введите телефон: ')]
     data = open('file.txt', 'a', encoding='utf-8')
